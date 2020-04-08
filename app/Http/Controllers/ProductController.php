@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 
+
 class ProductController extends Controller
 {
     /**
@@ -14,11 +15,19 @@ class ProductController extends Controller
      */
     public function index()
     {
-       $products = Product::latest()->Paginate(5);
-	   
+      // $products = Product::latest()->Paginate(5);
+
+       $products = Product::where('name', 'NARANJA')->Paginate(5);
+
+
+
+
+//dd($products);
+
+
 	   return view('products', compact('products'))
 	    ->with('i', (request()->input('page', 1) - 1) * 5);
-	   
+
     }
 
     /**

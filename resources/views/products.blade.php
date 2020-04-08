@@ -35,16 +35,16 @@
                       <td>{{ $product->name }}</td>
                       <td><span >{{ $product->detail }}</span></td>
                       <td>
-                         
+
                 <form action="{{ route('products.show',$product->id) }}" method="POST">
-   
+
                     @csrf
-					
+
                     <button class="btn btn-info btn-sm" data-toggle="modal" data-toggle="modal" data-target="#showModal" id="modalA"><i class="fa fa-eye"></i>  Mostrar</button>
 					<!--<a class="btn btn-info" href="{{ route('products.show',$product->id) }}" data-toggle="modalA" data-target="#modalShow" id="modalA">Mostrar</a>-->
-					
-					
-                    
+
+
+
                     <!--<a class="btn btn-success" href="">Editar</a>-->
                              <div class="btn-group">
                     <button type="button" class="btn btn-default btn-sm">Accion</button>
@@ -56,14 +56,14 @@
                       </div>
                     </button>
                   </div>
-                   
-      
+
+
                     <!--<button type="submit" class="btn btn-danger">Eliminar</button>-->
                 </form>
             </td>
-                      
+
                     </tr>
- 
+
                     </tbody>
 					    @endforeach
                   </table>

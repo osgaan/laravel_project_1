@@ -17,10 +17,7 @@ class ProductController extends Controller
     {
       // $products = Product::latest()->Paginate(5);
 
-       $products = Product::where('name', 'NARANJA')->Paginate(5);
-
-
-
+       $products = Product::where('id', '>','30')->Paginate(5);
 
 //dd($products);
 

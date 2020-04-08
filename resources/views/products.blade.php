@@ -1,4 +1,6 @@
 @extends('layout')
+@extends('products.nuevoModal')
+
 
 @section('products')
 <br>
@@ -72,7 +74,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer clearfix">
-                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Nuevo Producto</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left" data-toggle="modal" data-target="#exampleModal" id="modal">Nuevo Producto</a>
                 <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">Ver Productos</a>
               </div>
               <!-- /.card-footer -->

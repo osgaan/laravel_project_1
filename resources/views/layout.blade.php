@@ -3,6 +3,7 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
+@extends('nuevoModal')
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -10,7 +11,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>Administracion de Invenatio | Inicio</title>
-  
+
    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -30,30 +31,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"> 
-  
+  <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
 
- 
 </head>
 <body class="hold-transition sidebar-mini text-sm">
 <div class="wrapper">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-  
-  
-  
-  
+
+
+
+
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-  
+
     </ul>
 
 
-    <!-- Right navbar links 
+    <!-- Right navbar links
     <ul class="navbar-nav ml-auto">
 
       <li class="nav-item">
@@ -63,37 +62,37 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </ul>
 	    <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-	
+
 	      <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="fas fa-sign-out-alt"> </i> Cerrar Sesion
           <!--<span class="badge badge-warning navbar-badge"></span>-->
         </a>
-		
-		
-		
+
+
+
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-   
+
         <img src="dist/img/user_160x160.png" class="img-circle elevation-1" alt="User Image" style="height:110px; margin-left:80px;margin-top:30px;">
 		<br>
 		<br>
 		<center><span style="font-weight:bold;color:gray">{{ auth()->user()->email }}</span></center>
-          
+
 		   <span class="dropdown-header" style="font-size:20px;font-weight:bold"> </span>
 
 		  <div class="dropdown-divider"></div>
-		  
-		 
+
+
           <a href="{{ url('/main/logout') }}" class="dropdown-item dropdown-footer" style="font-size:15px; background-color:#343a40;color:white">Cerrar Sesion</a>
         </div>
       </li>
-   
-      
+
+
 
     </ul>
-	
-	
+
+
   </nav>
   <!-- /.navbar -->
 
@@ -120,7 +119,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-	  
+
         <ul class="nav nav-pills nav-sidebar flex-column nav-compact text-sm nav-flat" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
@@ -171,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-		
+
         <div class="col-sm-12">
 
         @yield('inventario')

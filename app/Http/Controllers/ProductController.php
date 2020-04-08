@@ -34,7 +34,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view ('products.create');
+
     }
 
     /**
@@ -45,7 +45,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+          'name'=>'required',
+          'detail'=>'required'
+
+        ]);
+
+        Product::create($request->all());
+        return redirect ()->route('products.index')
+        ->with('success','Se registro con exito el producto');
     }
 
     /**

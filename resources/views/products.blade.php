@@ -1,8 +1,9 @@
 @extends('layout')
-@extends('products.nuevoModal')
+
 
 
 @section('products')
+
 <br>
             <!-- TABLE: LATEST ORDERS -->
             <div class="card">
@@ -74,7 +75,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer clearfix">
-                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left" data-toggle="modal" data-target="#exampleModal" id="modal">Nuevo Producto</a>
+              <button type="button" class="btn btn-sm btn-info float-left" data-toggle="modal" data-target="#exampleModal" id="modal">Nuevo Producto</button>
                 <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">Ver Productos</a>
               </div>
               <!-- /.card-footer -->
@@ -82,6 +83,7 @@
             <!-- /.card -->
 
  {!! $products->links() !!}
+
 
 @endsection
 
